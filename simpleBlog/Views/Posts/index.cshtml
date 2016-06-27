@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<br />
+<br />
+
+<h1>Posts Index</h1>
+
+<p>
+    <a href="@Url.RouteUrl("login")">Click here</a> to Login!
+</p>
+
+
+@section Scripts
+{
+    <script>
+        alert("hi");
+    </script>
+}
+
+
+
+
+
+@*Note------------------*@
+@* //1)how to use razer
+    @if (true)
+    {
+        <text> 1'st way</text>
+        <p>2'nd way</p>
+        @: 3'ed way
+    }
+*@
+
+@* //2)helpers
+    <p>
+        @Html.RouteLink("click here", "login") to Login!
+    </p>
+*@
+
+
+@*end Note-------------*@

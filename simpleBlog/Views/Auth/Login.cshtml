@@ -1,4 +1,7 @@
-﻿@{
+﻿@model simpleBlog.ViewModels.AuthLogin
+
+
+@{
     ViewBag.Title = "login";
 }
 
@@ -6,7 +9,37 @@
 <br />
 <br />
 
-<h1>This is login view!</h1>
 
+@using (Html.BeginForm())
+{
+    
+    @Model.Message
+    
+    @Html.ValidationSummary()
+    <div>
+        @Html.LabelFor(x => x.UserName)
+        @Html.EditorFor(x => x.UserName)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Password)
+        @Html.EditorFor(X => X.Password)
+    </div>
+
+    <div>
+        <input type="submit" value="Login"/>
+    </div>
+    
+    
+}
+
+
+@* // basic way for sent data to controller
+<form method="POST">
+    <input type="text" name="Username"/>
+    <input type="password" name="Password"/>
+    <input type="submit" value="Login"/>
+</form>
+*@
 
 

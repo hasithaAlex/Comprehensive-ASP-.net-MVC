@@ -13,6 +13,11 @@ namespace simpleBlog.Models
         public virtual string UserName { get; set; }
         public virtual string Email { get; set; }
         public virtual string PasswordHash { get; set; }
+
+        public virtual void SetPassword(string password)
+        {
+            PasswordHash = "IGNORE ME";
+        }
     }
 
 

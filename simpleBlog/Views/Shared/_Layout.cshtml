@@ -32,7 +32,7 @@
         {
             
             <p><i class="glyphicon glyphicon-arrow-left"></i>welcome back, @User.Identity.Name</p>
-            <a href="@Url.RouteUrl("logout")">Logout</a>
+            <a class="btn btn-danger"  href="@Url.RouteUrl("logout")">Logout</a>
 
             if (User.IsInRole("admin"))
             {
@@ -41,7 +41,7 @@
         }
         else
         {
-            <a href="@Url.RouteUrl("login")">login</a>
+            <a class="btn btn-primary" href="@Url.RouteUrl("login")">login</a>
         }
     </header>
 
